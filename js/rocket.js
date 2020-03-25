@@ -12,6 +12,21 @@ var changeState = function (state){
 		timer = setInterval(function(){
 			countdownNumber = countdownNumber - 1;
 			document.getElementById('countdown').innerHTML = countdownNumber;
+			
+			if(countdownNumber > 4 && countdownNumber <= 7){
+				//be nervous
+				document.getElementById('nervous').className = 'nervous show';
+			}else{
+				document.getElementById('nervous').className = 'nervous';
+			}
+
+			if(countdownNumber > 1 && countdownNumber <= 4){
+				//cant wait
+				document.getElementById('cant-wait').className = 'cant-wait show'
+			}else{
+				document.getElementById('cant-wait').className = 'cant-wait'
+			}
+
 			if (countdownNumber<= 0) {
 				changeState(3);
 			}
@@ -25,7 +40,7 @@ var changeState = function (state){
 			console.log('randomNumbe:', randomNumber)
 
 			//success
-			if(randomNumber > 3){
+			if(randomNumber > 9){
 				changeState(4);
 			}else{
 				changeState(5); //oh no!
