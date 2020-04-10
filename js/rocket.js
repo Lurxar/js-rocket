@@ -40,7 +40,7 @@ var changeState = function (state){
 			console.log('randomNumbe:', randomNumber)
 
 			//success
-			if(randomNumber > 3){
+			if(randomNumber > 0){
 				changeState(4);
 			}else{
 				changeState(5); //oh no!
