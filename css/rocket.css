@@ -3,7 +3,7 @@ body{
 }
 
 .left{
-	background-color: cyan/*aquamarine*/;
+	background-color: aquamarine;
 	position: fixed;
 	width: 50%;
 	height: 100%;
